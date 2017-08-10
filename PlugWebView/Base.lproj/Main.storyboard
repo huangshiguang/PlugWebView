@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPW-nS-m1B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5n-ms-wWr">
+                                <rect key="frame" x="20" y="30" width="270" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rgT-GI-R3L"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hud-xg-oYU">
+                                <rect key="frame" x="300" y="30" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5Cb-Wv-qX3"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rk2-Fr-KGc"/>
+                                </constraints>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <action selector="ConfirmBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mrt-Ps-jkj"/>
+                                    <action selector="confirmBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6P-ez-t8d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vPW-nS-m1B" secondAttribute="trailing" id="0V5-9J-sbs"/>
+                            <constraint firstItem="g5n-ms-wWr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="3a7-EN-IFe"/>
+                            <constraint firstItem="Hud-xg-oYU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="54j-Kh-UiY"/>
+                            <constraint firstItem="g5n-ms-wWr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Iq1-QH-dF0"/>
+                            <constraint firstItem="Hud-xg-oYU" firstAttribute="leading" secondItem="g5n-ms-wWr" secondAttribute="trailing" constant="10" id="QSA-YC-t63"/>
+                            <constraint firstItem="vPW-nS-m1B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V3v-Z5-VHv"/>
+                            <constraint firstItem="vPW-nS-m1B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d6y-ho-uzo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vPW-nS-m1B" secondAttribute="bottom" id="iEN-ym-VfS"/>
+                            <constraint firstAttribute="trailing" secondItem="Hud-xg-oYU" secondAttribute="trailing" constant="15" id="py6-6M-m7T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ConfirmBtn" destination="Hud-xg-oYU" id="YAP-YY-V7V"/>
+                        <outlet property="MytextField" destination="g5n-ms-wWr" id="WXG-I6-jdr"/>
+                        <outlet property="SearchWebView" destination="vPW-nS-m1B" id="hrH-oI-vhO"/>
+                        <outlet property="confirmBtn" destination="Hud-xg-oYU" id="X7y-MF-3Nr"/>
+                        <outlet property="mytextField" destination="g5n-ms-wWr" id="wTp-CC-WXV"/>
+                        <outlet property="searchWebView" destination="vPW-nS-m1B" id="Jl9-at-sJw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
